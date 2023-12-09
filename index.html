@@ -1,8 +1,38 @@
-<html>
-<body>
+<style>
+body {
+  background-image: url('images/bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
-</body>
-</html>
+<script type="text/javascript">
+  var imageURLs = [
+       "images/cat1.gif"
+     , "images/cat2.gif"
+     , "images/cat3.gif"
+     , "images/cat4.gif"
+	 , "images/cat5.gif"
+	 , "images/cat6.gif"
+  ];
+  function getImageTag() {
+    var img = '<img src=\"';
+    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+    img += imageURLs[randomIndex];
+    img += '\" width="400" height="220" vspace="580"/>';
+    return img;
+  }
+</script>
+
+<script type="text/javascript">
+  document.write(getImageTag());
+</script>
+
+
